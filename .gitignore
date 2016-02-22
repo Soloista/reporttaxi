@@ -1,0 +1,7 @@
+# Created by .ignore support plugin (hsz.mobi)
+node_modules/
+build/
+electron-build/
+electron-build.linux.bak/
+electron-build.win64.bak/
+cache/
