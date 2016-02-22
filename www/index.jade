@@ -1,0 +1,187 @@
+html
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1, user-scalable=no")
+        title Report A Taxi
+        link(rel='stylesheet' href='css/lib/pure.min.css')
+        link(rel='stylesheet' href='css/lib/grid.min.css')
+        link(rel='stylesheet' href='css/lib/blog.css')
+        link(rel='stylesheet' href='css/lib/animate.css')
+        link(rel='stylesheet' href='css/style.css')
+        script(src='js/lib/yui.min.js')
+    body
+        div#layout.pure-g
+            div.sidebar.pure-u-1.pure-u-md-1-4
+                div.header
+                    h1.brand-title Report A Taxi
+                    h2.brand-tagline Report Abusive Drivers In The Philippines
+                    nav.nav
+                        ul.nav-list
+                            li.nav-item
+                                a.pure-button#showReportDialog Report!
+
+                    // Above is the main Menu
+                    div.pure-menu
+                        ul.pure-menu-list#left-nav
+                            li.pure-menu-item
+                                a.pure-menu-link Reports
+                            li.pure-menu-item
+                                a.pure-menu-link About Us
+                            li.pure-menu-item
+                                a.pure-menu-link Contact Us
+            content.content.pure-u-1.pure-u-md-3-4
+                div
+                    div.post#pinned-top
+                        h1.content-subhead SAVED REPORTS
+                        section.post
+                            div.post-description
+                                p
+                                    | Below are the saved incidents reported that are sent to LTFRB. They will take the appropriate action on each complaint and they might contact you for further details. Please take note that LTFRB needs your cooperation by attending a hearing/s in some incidents.
+
+                    div.history
+                        div.posts
+                            section.post
+                                header.post-header
+                                    h2.post-title 876YYY
+                                    p.post-meta
+                                        | Date: 02/15/2016
+                                    p.post-meta
+                                        | Driver's Name: Someone
+                                    p.post-meta
+                                        | Case(s): over charging
+                                    p.post-meta
+                                        | Location: Makati
+                                div.post-description
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        div.posts
+                            section.post
+                                header.post-header
+                                    h2.post-title 876YYY
+                                    p.post-meta
+                                        | Date: 02/15/2016
+                                    p.post-meta
+                                        | Driver's Name: Someone
+                                    p.post-meta
+                                        | Case(s): over charging
+                                    p.post-meta
+                                        | Location: Makati
+                                div.post-description
+                                    p
+                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+            dialog#progressDialog
+                div#messageProgress.pure-u-1.pure-u-md-1-1
+            dialog#reportDialog
+                div.pure-u-1.pure-u-md-1-1
+                    form.pure-form.pure-form-stacked#reportForm
+                        legend Details Of Your Report
+                        div.pure-g
+                            div.pure-u-1-3
+                                label(for='date') Date
+                                input(name='date' type='date' required)#date
+                                label(for='plateno') Plate #
+                                input(name='plateno' placeholder='123ABC' required)#plateno
+                                label(for='taxiname') Taxi Name
+                                input(name='taxiname' placeholder='R.O.S Taxi or Dollar Taxi' required)#taxiname
+                                label(for='location') Location
+                                input(name='location' placeholder='Ex.: Ayala Ave, Makati City' required)#location
+                                label(for='details') Comment
+                                textarea(name='comment' placeholder='Details of Incident' required)#details
+                            div.pure-u-1-3
+                                label Violation
+                                label(for='option-one')
+                                    input(type='radio' name='violation' value='Refused Boarding' checked=true)#option-one
+                                    |  Refused Boarding
+                                label(for='option-two')
+                                    input(type='radio' name='violation' value='Choosing Passenger')#option-two
+                                    |  Choosing Passenger
+                                label(for='option-three')
+                                    input(type='radio' name='violation' value='Over Charging')#option-three
+                                    |  Over Charging
+                                label(for='option-four')
+                                    input(type='radio' name='violation' value='No Meter')#option-four
+                                    |  No Meter
+                                label(for='option-five')
+                                    input(type='radio' name='violation' value='Tampered Or Broken Meter')#option-five
+                                    |  Tampered Or Broken Meter
+                                label(for='option-six')
+                                    input(type='radio' name='violation' value='Contracting')#option-six
+                                    |  Contracting
+                                label(for='option-seven')
+                                    input(type='radio' name='violation' value='No Receipt')#option-seven
+                                    |  No Receipt
+                                label(for='option-eight')
+                                    input(type='radio' name='violation' value='Reckless Driving')#option-eight
+                                    |  Reckless Driving
+                                label(for='option-nine')
+                                    input(type='radio' name='violation' value='Rude Behavior')#option-nine
+                                    |  Rude Behavior
+                                label(for='option-ten')
+                                    input(type='radio' name='violation' value='Smoking While Driving')#option-ten
+                                    |  Smoking While Driving
+                                label(for='option-eleven')
+                                    input(type='radio' name='violation' value='Not In Uniform')#option-eleven
+                                    |  Not In Uniform
+                                label(for='option-twelve')
+                                    input(type='radio' name='violation' value='No Seatbelts')#option-twelve
+                                    |  No Seatbelts
+                                label(for='option-thirteen')
+                                    input(type='radio' name='violation' value='Smelly and Dirty Interiors')#option-thirteen
+                                    |  Smelly and Dirty Interiors
+                                label(for='option-fourteen')
+                                    input(type='radio' name='violation' value='Left Behind Items')#option-fourteen
+                                    |  Left Behind Items
+                                label(for='option-fifteen')
+                                    input(type='radio' name='violation' value='Physical Assault')#option-fifteen
+                                    |  Physical Assault
+                                label(for='option-sixteen')
+                                    input(type='radio' name='violation' value='Malicious Mischief')#option-sixteen
+                                    |  Malicious Mischief
+                                label(for='option-seventeen')
+                                    input(type='radio' name='violation' value='Sexual Assault')#option-seventeen
+                                    |  Sexual Assault
+                                label(for='option-eighteen')
+                                    input(type='radio' name='violation' value='Dilapidated')#option-eighteen
+                                    |  Dilapidated
+                                label(for='option-nineteen')
+                                    input(type='radio' name='violation' value='No Taxi Details Inside')#option-nineteen
+                                    |  No Taxi Details Inside
+                                label(for='option-twenty')
+                                    input(type='radio' name='violation' value='LPG Smells')#option-twenty
+                                    |  LPG Smells
+                                label(for='option-twentyone')
+                                    input(type='radio' name='violation' value='Texting While Driving')#option-twentyone
+                                    |  Texting While Driving
+                                label(for='option-twentytwo')
+                                    input(type='radio' name='violation' value='Not Giving Exact Exchange')#option-twentytwo
+                                    |  Not Giving Exact Exchange
+                                label(for='option-twentythree')
+                                    input(type='radio' name='violation' value='No Flag-down Meter')#option-twentythree
+                                    |  No Flag-down Meter
+                                label(for='option-twentyfour')
+                                    input(type='radio' name='violation' value='Overloading')#option-twentyfour
+                                    |  Overloading
+                                label(for='option-twentyfive')
+                                    input(type='radio' name='violation' value='Cutting Trip')#option-twentyfive
+                                    |  Cutting Trip
+                                label(for='option-twentysix')
+                                    input(type='radio' name='violation' value='Out of Line')#option-twentysix
+                                    |  Out of Line
+                            div.pure-u-1-3
+                                label
+                                    b Tell Us About Yourself
+                                br
+                                label(for='reporterName') Name
+                                input(name='reporterName' type='text' placeholder='Juan Dela Cruz' required)#reporterName
+                                label(for='email') Email
+                                input(name='reporterEmail' type='email' placeholder='youremail@provider.com' required)#email
+                                label(for='contactNumber') Contact Number
+                                input(name='contactno' type='text' pattern='[0-9]+' placeholder='Mobile # or Telephone #' required)#contactNumber
+                                label(for='reporterAddress') Address
+                                input(name='reporterAddress' type='text' placeholder='Ex.: San Antonio, Pasig' required)#reporterAddress
+                                input(type='submit' value='Send').pure-button.pure-button-primary
+                                a(href='#').pure-button.button-error#closeDialog Cancel
+        div#yui3-css-stamp(style='position: absolute !important; visibility: hidden !important')
+        script(src='js/dbloki.js')
+        script(src='js/emailprogress.js')
+        script(src='js/sendreport.js')

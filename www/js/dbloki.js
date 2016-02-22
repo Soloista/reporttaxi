@@ -1,0 +1,1 @@
+var db,loki,recordInterface,records;loki=require("lokijs"),db=new loki("db.json"),records={},db.loadDatabase({},function(){records=db.getCollection("records"),null===records&&(records=db.addCollection("records"))}),recordInterface={insert:function(r){records.insert(r)},getRecords:function(){return records.find()}};
