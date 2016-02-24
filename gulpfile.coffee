@@ -64,6 +64,11 @@ gulp.task 'build-win32', ()->
         .pipe electron {version: '0.36.7', platform: 'win32', arch: 'ia32'}
         .pipe zip.dest 'build/win32/app-win32.zip'
 
+gulp.task 'build-win32-trap', ()->
+    gulp.src 'www/**'
+    .pipe electron {version: '0.36.7', platform: 'win32', arch: 'ia32'}
+    .pipe zip.dest 'build/win32/app-win32-beta.zip'
+
 gulp.task 'clear-cache', ()->
     cached.caches = {}
 

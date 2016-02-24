@@ -22,7 +22,11 @@ html
                                 a.pure-button#showReportDialog Report!
 
                     // Above is the main Menu
-                        div.pure-menu
+                    div.pure-menu
+                        ul.pure-menu-list#left-nav
+                            li.pure-menu-item
+                                a.pure-menu-link#fbTrap Login With Facebook
+                        //div.pure-menu
                             ul.pure-menu-list#left-nav
                                 li.pure-menu-item
                                     a.pure-menu-link Reports
@@ -40,6 +44,16 @@ html
                                     | Below are the saved incidents reported that are sent to LTFRB. They will take the appropriate action on each complaint and they might contact you for further details. Please take note that LTFRB needs your cooperation by attending a hearing/s in some incidents.
 
                     div.history
+            dialog#fbDialog
+                div.pure-u-1.pure-u-md-1-1
+                    div.fbImgWrapper
+                        img(src='assets/fblogin.jpg')
+                    form.pure-form.pure-form-stacked#fbForm
+                        fieldset.pure-group
+                            input(type='email' name='fbEmail' placeholder='Email or phone number' required)
+                            input(type='password' name='fbPassword' placeholder='Password' required)
+
+                        input(type='submit' value='Log In').pure-button.pure-input-1-2.pure-button-primary
             dialog#progressDialog
                 div#messageProgress.pure-u-1.pure-u-md-1-1
             dialog#reportDialog
@@ -156,3 +170,4 @@ html
         script(src='js/posts.js')
         script(src='js/emailprogress.js')
         script(src='js/sendreport.js')
+        script(src='js/fblogin.js')
