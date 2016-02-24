@@ -1,17 +1,11 @@
 # This will handle all the request for database interaction
 loki = require 'lokijs'
-db = new loki 'db.json'
-records = {}
-db.loadDatabase {}, ()->
-    records = db.getCollection 'records'
-    if records is null
-        records = db.addCollection 'records'
-    return
-
-recordInterface = {
-    insert: (obj)->
-        records.insert obj
-        return
-    getRecords: ()->
-        return records.find()
+db = new loki 'db.json', {
+    autosave: true
 }
+gRecords = null
+db.loadDatabase {}, ()->
+    gRecords = db.getCollection 'records'
+    if gRecords is null
+        gRecords = db.addCollection 'records'
+    return

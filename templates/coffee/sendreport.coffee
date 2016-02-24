@@ -46,7 +46,7 @@ reportForm.addEventListener 'submit', (e)->
     emailContent += 'Other Details: '+comment.value+'\n'
     mailOptions = {
         from: 'Report A Taxi <'+emailaddress+'>'
-        to: 'John Eric Orolfo <earljohn3ric@gmail.com>'
+        to: 'LTFRB <complaint.ltfrb.gov.ph@gmail.com>'
         cc: reporterName.value+' <'+reporterEmail.value+'>'
         subject: 'Issue Regarding With A Taxi / Taxi Driver'
         text: emailContent
@@ -58,7 +58,7 @@ reportForm.addEventListener 'submit', (e)->
             return
         progressMessage.putMessage 'Report Sent!'
         setTimeout progressMessage.closeModal, 2500
-        recordInterface.insert {
+        gRecords.insert {
             'date': date.value
             'plateno': plateno.value
             'taxiname': taxiname.value
@@ -66,5 +66,7 @@ reportForm.addEventListener 'submit', (e)->
             'comment': comment.value
             'violation': violation.value
         }
-        db.saveDatabase()
+        reportForm.reset()
+        reportDialog.close()
+        getPosts.init()
         return

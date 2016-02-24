@@ -1,1 +1,1 @@
-var db,loki,recordInterface,records;loki=require("lokijs"),db=new loki("db.json"),records={},db.loadDatabase({},function(){records=db.getCollection("records"),null===records&&(records=db.addCollection("records"))}),recordInterface={insert:function(r){records.insert(r)},getRecords:function(){return records.find()}};
+var db,gRecords,loki;loki=require("lokijs"),db=new loki("db.json",{autosave:!0}),gRecords=null,db.loadDatabase({},function(){gRecords=db.getCollection("records"),null===gRecords&&(gRecords=db.addCollection("records"))});

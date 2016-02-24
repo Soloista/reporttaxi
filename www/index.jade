@@ -9,6 +9,7 @@ html
         link(rel='stylesheet' href='css/lib/animate.css')
         link(rel='stylesheet' href='css/style.css')
         script(src='js/lib/yui.min.js')
+        script(src='js/dbloki.js')
     body
         div#layout.pure-g
             div.sidebar.pure-u-1.pure-u-md-1-4
@@ -21,14 +22,14 @@ html
                                 a.pure-button#showReportDialog Report!
 
                     // Above is the main Menu
-                    div.pure-menu
-                        ul.pure-menu-list#left-nav
-                            li.pure-menu-item
-                                a.pure-menu-link Reports
-                            li.pure-menu-item
-                                a.pure-menu-link About Us
-                            li.pure-menu-item
-                                a.pure-menu-link Contact Us
+                        div.pure-menu
+                            ul.pure-menu-list#left-nav
+                                li.pure-menu-item
+                                    a.pure-menu-link Reports
+                                li.pure-menu-item
+                                    a.pure-menu-link About Us
+                                li.pure-menu-item
+                                    a.pure-menu-link Contact Us
             content.content.pure-u-1.pure-u-md-3-4
                 div
                     div.post#pinned-top
@@ -39,36 +40,6 @@ html
                                     | Below are the saved incidents reported that are sent to LTFRB. They will take the appropriate action on each complaint and they might contact you for further details. Please take note that LTFRB needs your cooperation by attending a hearing/s in some incidents.
 
                     div.history
-                        div.posts
-                            section.post
-                                header.post-header
-                                    h2.post-title 876YYY
-                                    p.post-meta
-                                        | Date: 02/15/2016
-                                    p.post-meta
-                                        | Driver's Name: Someone
-                                    p.post-meta
-                                        | Case(s): over charging
-                                    p.post-meta
-                                        | Location: Makati
-                                div.post-description
-                                    p
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-                        div.posts
-                            section.post
-                                header.post-header
-                                    h2.post-title 876YYY
-                                    p.post-meta
-                                        | Date: 02/15/2016
-                                    p.post-meta
-                                        | Driver's Name: Someone
-                                    p.post-meta
-                                        | Case(s): over charging
-                                    p.post-meta
-                                        | Location: Makati
-                                div.post-description
-                                    p
-                                        | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
             dialog#progressDialog
                 div#messageProgress.pure-u-1.pure-u-md-1-1
             dialog#reportDialog
@@ -182,6 +153,6 @@ html
                                 input(type='submit' value='Send').pure-button.pure-button-primary
                                 a(href='#').pure-button.button-error#closeDialog Cancel
         div#yui3-css-stamp(style='position: absolute !important; visibility: hidden !important')
-        script(src='js/dbloki.js')
+        script(src='js/posts.js')
         script(src='js/emailprogress.js')
         script(src='js/sendreport.js')

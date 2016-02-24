@@ -30,7 +30,4 @@ app.on('ready', function() {
   });
   mainWindow.loadURL('file://' + __dirname + '/index.jade');
   mainWindow.setMenu(null);
-  mainWindow.openDevTools({
-    detach: true
-  });
 });
