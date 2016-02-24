@@ -1,0 +1,38 @@
+html, body {
+    font-family: "Helvetica";
+}
+
+body {
+    background: #dedddd;
+}
+
+header {
+    background: #ff6347;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+section {
+    background: #ffffff;
+    border-radius: 5px;
+    margin: 0 auto;
+    width: 960px;
+    padding: 20px;
+}
+
+label {
+    display: block;
+}
+
+/*helpers*/
+.divider {
+    height: 20px;
+}
