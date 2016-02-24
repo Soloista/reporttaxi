@@ -1,7 +1,9 @@
 # Created by .ignore support plugin (hsz.mobi)
+.idea/
 node_modules/
 build/
 electron-build/
+electron-build.win32.back/
 electron-build.linux.bak/
 electron-build.win64.bak/
 cache/
